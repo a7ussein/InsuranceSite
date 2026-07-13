@@ -180,15 +180,23 @@ a{color:inherit}
   animation:marquee 46s linear infinite;
 }
 .carrier{
-  display:flex;align-items:center;gap:0;flex-shrink:0;
+  display:flex;align-items:center;gap:12px;flex-shrink:0;
 }
 .carrier img{
-  height:36px;width:auto;
+  height:32px;width:auto;
   opacity:.65;filter:grayscale(1);
   transition:opacity .25s ease, filter .25s ease;
 }
+.carrier b{
+  font-family:var(--body);font-weight:600;font-size:1.3rem;letter-spacing:-.01em;
+  color:var(--ink);opacity:.72;white-space:nowrap;
+  transition:opacity .25s ease,color .25s ease;
+}
 .carrier:hover img{
   opacity:1;filter:grayscale(0);
+}
+.carrier:hover b{
+  opacity:1;color:var(--champagne);
 }
 .carrier .dia{
   margin:0 clamp(24px,3.5vw,44px);width:5px;height:5px;background:var(--champagne-dim);
