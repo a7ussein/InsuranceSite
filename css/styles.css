@@ -281,7 +281,7 @@ section{padding:clamp(88px,10vw,140px) 0}
 .about-portrait{
   border-radius:24px;overflow:hidden;background:var(--ivory-dim);position:relative;
 }
-.about-portrait img{width:100%;height:auto;}
+.about-portrait img{width:100%;height:auto;filter:sepia(0.2) grayscale(0.5) contrast(1.05);}
 .about-portrait::after{
   display:none;
 }
