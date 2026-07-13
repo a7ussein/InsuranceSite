@@ -169,16 +169,17 @@ a{color:inherit}
   display:flex;align-items:center;gap:0;width:max-content;
   animation:marquee 46s linear infinite;
 }
-.marquee:hover .marquee-track{animation-play-state:paused}
 .carrier{
   display:flex;align-items:center;gap:0;flex-shrink:0;
 }
-.carrier b{
-  font-family:var(--display);font-weight:400;font-size:1.35rem;letter-spacing:.01em;
-  color:var(--ink);opacity:.72;white-space:nowrap;
-  transition:opacity .25s ease,color .25s ease;
+.carrier img{
+  height:36px;width:auto;
+  opacity:.65;filter:grayscale(1);
+  transition:opacity .25s ease, filter .25s ease;
 }
-.carrier:hover b{opacity:1;color:var(--champagne-dim)}
+.carrier:hover img{
+  opacity:1;filter:grayscale(0);
+}
 .carrier .dia{
   margin:0 clamp(24px,3.5vw,44px);width:5px;height:5px;background:var(--champagne-dim);
   transform:rotate(45deg);opacity:.55;flex-shrink:0;
