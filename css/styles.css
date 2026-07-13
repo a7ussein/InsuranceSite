@@ -18,14 +18,24 @@ html{scroll-behavior:smooth}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{
   font-family:var(--body);font-weight:400;
-  background:var(--ivory);color:var(--ink);
+  background:linear-gradient(135deg, #e0f2fe 0%, #1e3a8a 100%);
+  background-attachment:fixed;
+  color:var(--ink);
   font-size:18px;line-height:1.6;
   -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
 }
 ::selection{background:var(--champagne);color:var(--ink)}
 img{max-width:100%;display:block}
 a{color:inherit}
-.wrap{max-width:var(--max);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+.wrap{
+  max-width:var(--max);margin:0 auto;padding:48px var(--pad);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: 24px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
 
 /* ---------- type utilities ---------- */
 .eyebrow{
@@ -78,7 +88,7 @@ a{color:inherit}
   border-bottom:1px solid transparent;
 }
 .nav.on-dark{color:var(--ink)}
-.nav.scrolled{background:rgba(255,255,255,.9);backdrop-filter:blur(14px);border-color:var(--hairline-l);color:var(--ink)}
+.nav.scrolled{background:rgba(255,255,255,.75);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-color:var(--hairline-l);color:var(--ink)}
 .nav-inner{
   max-width:var(--max);margin:0 auto;padding:22px var(--pad);
   display:flex;align-items:center;justify-content:space-between;gap:20px;
@@ -103,8 +113,8 @@ a{color:inherit}
 
 /* ---------- hero ---------- */
 .hero{
-  background:var(--ivory);color:var(--ink);
-  padding:170px 0 0;position:relative;overflow:hidden;
+  background:transparent;color:var(--ink);
+  padding:140px 0 0;position:relative;overflow:hidden;
 }
 .hero::before{ /* faint radial atmosphere */
   content:"";position:absolute;inset:0;pointer-events:none;
@@ -161,7 +171,7 @@ a{color:inherit}
 
 /* ---------- carrier marquee ---------- */
 .carriers{
-  background:var(--ivory);border-bottom:1px solid var(--hairline-l);
+  background:transparent;
   padding:44px 0 48px;overflow:hidden;
 }
 .carriers-head{
@@ -211,7 +221,7 @@ a{color:inherit}
 .marquee-track > .half{display:flex;align-items:center}
 
 /* ---------- sections shared ---------- */
-section{padding:clamp(88px,10vw,140px) 0}
+section{padding:clamp(24px,5vw,48px) 16px;}
 .sec-head{display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,4vw,72px);align-items:start;margin-bottom:clamp(48px,6vw,84px)}
 .sec-head .eyebrow{color:var(--champagne-dim);padding-top:14px;white-space:nowrap}
 .sec-head h2{font-size:clamp(2rem,3.8vw,3.1rem);max-width:14em}
@@ -253,7 +263,7 @@ section{padding:clamp(88px,10vw,140px) 0}
 }
 
 /* ---------- philosophy band ---------- */
-.band{background:var(--ivory);color:var(--ink);position:relative;overflow:hidden}
+.band{background:transparent;color:var(--ink);position:relative;overflow:hidden}
 .band::before{
   content:"";position:absolute;inset:0;
   background:radial-gradient(ellipse 60% 60% at 18% 80%,rgba(63,174,129,.07),transparent 60%);
@@ -331,7 +341,7 @@ section{padding:clamp(88px,10vw,140px) 0}
 @media(max-width:860px){.about-grid{grid-template-columns:1fr}}
 
 /* ---------- testimonials ---------- */
-.testimony{background:var(--ivory);color:var(--ink)}
+.testimony{background:transparent;color:var(--ink)}
 .t-stage{max-width:900px;margin:0 auto;text-align:center;position:relative;min-height:330px}
 .t-mark{
   font-family:var(--display);font-style:italic;font-size:4.5rem;color:var(--champagne);
@@ -369,7 +379,7 @@ details .a{padding:0 4px 28px;color:var(--slate);font-size:.96rem;max-width:56ch
 @media(max-width:760px){.faq-grid{grid-template-columns:1fr;gap:18px}}
 
 /* ---------- consultation ---------- */
-.consult{background:var(--ivory);color:var(--ink)}
+.consult{background:transparent;color:var(--ink)}
 .consult-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(48px,6vw,100px);align-items:start}
 .consult .eyebrow{color:var(--champagne);margin-bottom:30px}
 .consult h2{font-size:clamp(2.1rem,4vw,3.2rem);color:var(--ink);margin-bottom:24px}
