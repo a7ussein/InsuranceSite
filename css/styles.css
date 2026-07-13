@@ -21,7 +21,7 @@ html{scroll-behavior:smooth}
 body{
   font-family:var(--body);font-weight:400;
   background:var(--ivory);color:var(--ink);
-  font-size:17.5px;line-height:1.7;
+  font-size:19.5px;line-height:1.75;
   -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
 }
 ::selection{background:var(--champagne);color:var(--ink)}
