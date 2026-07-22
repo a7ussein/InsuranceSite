@@ -7,8 +7,8 @@
   --champagne-dim:#5b8abf;
   --sage:#94a3b8;
   --slate:#cbd5e1;
-  --hairline-d:rgba(244,247,251,.14);
-  --hairline-l:rgba(15,31,51,.14);
+  --hairline-d:rgba(255,255,255,.10);
+  --hairline-l:rgba(255,255,255,.12);
   --max:1240px;
   --pad:clamp(24px,5vw,64px);
   --body:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -26,7 +26,7 @@ body{
   font-size:18px;line-height:1.6;
   -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
 }
-::selection{background:var(--champagne);color:var(--ink)}
+::selection{background:var(--champagne);color:#0f1f33}
 img{max-width:100%;display:block}
 a{color:inherit}
 .wrap{
@@ -60,7 +60,7 @@ a{color:inherit}
   font-family:var(--body);font-weight:700;font-size:1.1rem;
   text-decoration:none;
   padding:16px 32px;border:none;border-radius:9999px;cursor:pointer;
-  background:var(--champagne);color:var(--ink);
+  background:var(--champagne);color:#0f1f33;
   transition:all .2s ease;
   width:max-content;
 }
@@ -76,13 +76,13 @@ a{color:inherit}
 }
 
 .btn-secondary {
-  background: rgba(255,255,255,0.9);
-  border: 1px solid var(--champagne);
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
   color: var(--ink);
 }
 .btn-secondary:hover {
-  background: white;
-  border-color: #d09018;
+  background: rgba(255,255,255,0.2);
+  border-color: var(--champagne);
 }
 .btn-phone-header {
   padding: 10px 20px;
@@ -428,8 +428,8 @@ details .a{padding:0 4px 28px;color:var(--slate);font-size:.96rem;max-width:56ch
   transition:border-color .25s ease;border-radius:0;
 }
 .f-field select{appearance:none;cursor:pointer}
-.f-field select option{color:var(--ink)}
-.f-field input::placeholder,.f-field textarea::placeholder{color:#5B665F}
+.f-field select option{color:#0f1f33;background:#fff}
+.f-field input::placeholder,.f-field textarea::placeholder{color:rgba(255,255,255,0.35)}
 .f-field input:focus,.f-field select:focus,.f-field textarea:focus{outline:none;border-color:var(--champagne)}
 .f-field.err input{border-color:#B3402A}
 .form-card .btn{width:100%;justify-content:center;margin-top:10px}
