@@ -1,67 +1,54 @@
-# Alex Manchester Insurance Advisory - Static Site
+# Alexander Manchester Insurance Advisory — Static Site
 
-This is the refactored, production-ready static site for **Alex Manchester Insurance Advisory**.
+This is the production-ready static site for **Alexander Manchester Insurance Advisory**.
 
-All CSS is extracted to `css/styles.css`, and all custom interactive JavaScript logic is in `js/main.js`. Base64 images have been extracted and optimized to `assets/alex-portrait.jpg` (resized to 1100px wide, quality 80%, 1100x1467 ratio).
+All CSS is in `css/styles.css`, and all custom interactive JavaScript logic is in `js/main.js`. The portrait image is optimized at `assets/alex-portrait.jpg` (1100×1467, quality 80%).
 
 ## Project Structure
 
 ```
 /
-├── index.html            # Main site HTML (fully optimized, semantic, a11y & SEO friendly)
+├── index.html            # Main site HTML (semantic, a11y & SEO ready)
 ├── css/
-│   └── styles.css        # Extracted CSS styles (root custom properties intact)
+│   └── styles.css        # All styles (CSS custom properties, glassmorphism cards, responsive)
 ├── js/
-│   └── main.js           # Extracted JavaScript (loads deferred; handles Formspree integration)
+│   └── main.js           # Deferred JS (marquee clone, reveal animations, testimonial rotation, FAQ accordion)
 ├── assets/
-│   ├── alex-portrait.jpg # Grayscale-ready optimized portrait of Alex
-│   └── favicon.svg       # SVG favicon featuring "AM" serif monogram
-└── README.md             # Project documentation and pre-launch configuration checklist
+│   ├── alex-portrait.jpg # Optimized portrait of Alexander Manchester
+│   ├── favicon.svg       # SVG favicon featuring "AM" serif monogram
+│   └── logos/            # Carrier logo assets (SVG placeholders + real PNGs)
+└── README.md             # This file
 ```
 
 ## Running Locally
 
-To run the site locally, you can use any static file server. Since python is built into macOS, you can easily launch it from your terminal:
-
 ```bash
-# Navigate to the folder (if not already there)
 cd /Users/alexmanchester/Desktop/InsuranceSite
-
-# Start a local Python server
 python3 -m http.server 8000
 ```
 
-Once running, navigate to:
-**[http://localhost:8000](http://localhost:8000)**
+Then visit **[http://localhost:8000](http://localhost:8000)**.
 
-## Deploying to Vercel or Netlify
+## Deploying
 
-Because this is a pure, zero-dependency static site, it requires no build step and can be hosted instantly.
+This is a zero-dependency static site — no build step required.
 
-### Option A: Vercel
-1. Install the Vercel CLI: `npm i -g vercel` (if you have Node.js), or sign up at [vercel.com](https://vercel.com).
-2. Run `vercel` in the project root folder.
-3. Follow the interactive prompts to link your account and deploy.
+### Vercel
+1. Install Vercel CLI: `npm i -g vercel`
+2. Run `vercel` in the project root and follow prompts.
 
-### Option B: Netlify
-1. Create a Netlify account at [netlify.com](https://netlify.com).
-2. Go to the dashboard, click **Add new site** -> **Deploy manually**.
-3. Drag and drop the `InsuranceSite` folder into the Netlify drop zone.
-4. Your site will be online in seconds.
+### Netlify
+1. Go to [netlify.com](https://netlify.com) → **Add new site** → **Deploy manually**.
+2. Drag and drop the project folder into the drop zone.
 
 ---
 
-## ⚠️ Pre-Launch Checklist (Configuration TODOs)
+## ⚠️ Pre-Launch Checklist
 
-Before deploying this site to a live domain, you **MUST** update the placeholder variables marked with `TODO` comments in the source code:
+Before going live, review these items:
 
-1. **Formspree Integration**:
-   - In `js/main.js` (line 61), replace `FORM_ID_HERE` with your actual Formspree form ID to receive consultation requests.
-2. **Canonical & Social URL**:
-   - In `index.html` (lines 8 & 16), update the placeholder canonical URL to your final production domain.
-3. **Contact Details**:
-   - Replace placeholder direct phone numbers `(603) 555-0142` (in `index.html` lines 469, 732, and 776).
-   - Replace placeholder email address `alex@manchesteradvisory.com` (in `index.html` line 733).
-   - Replace placeholder office address `84 Elm Street, Suite 210 · Manchester, NH` (in `index.html` line 734).
-4. **Marquee Carrier Names**:
-   - Review and edit the `<span>` tags inside the marquee element (in `index.html` lines 503–516) to accurately reflect the carrier appointments you hold.
+1. **Canonical & Social URLs** — Update the `<link rel="canonical">` and `og:url` values in `index.html` to match your production domain.
+2. **OG/Twitter Image URL** — Update the `og:image` and `twitter:image` meta tags to the full production URL of the portrait.
+3. **Carrier Logo Assets** — Six carriers currently use SVG placeholders (Aetna, Americo, American Amicable, Ethos, Aflac, American General). Replace each `.svg` file in `assets/logos/` with the real carrier logo. The matching TODO comments in `index.html` mark which ones.
+4. **Testimonials** — The three testimonials are placeholders. Replace with verified client testimonials and ensure written consent is on file before launch (insurance compliance requirement).
+5. **Calendly Link** — Verify the Calendly embed URL (`manchesteralex633/30min`) is correct and the account is active.
