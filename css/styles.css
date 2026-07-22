@@ -197,10 +197,10 @@ a{color:inherit}
 
 /* ---------- carrier marquee ---------- */
 .carriers{
-  background:linear-gradient(180deg, rgba(40,70,130,0.5) 0%, rgba(30,58,110,0.35) 100%);
+  background:rgba(200,215,240,0.18);
   padding:24px 0 32px;overflow:hidden;
-  border-top:1px solid rgba(255,255,255,0.08);
-  border-bottom:1px solid rgba(255,255,255,0.08);
+  border-top:1px solid rgba(255,255,255,0.1);
+  border-bottom:1px solid rgba(255,255,255,0.1);
 }
 .carriers-head{
   display:flex;justify-content:space-between;align-items:baseline;gap:20px;
@@ -223,6 +223,7 @@ a{color:inherit}
 .carrier img{
   height:32px;max-height:32px;width:auto;
   object-fit:contain;
+  filter:brightness(1.8) contrast(1.1);
 }
 .carrier .dia{
   margin:0 clamp(24px,3.5vw,44px);width:5px;height:5px;background:var(--champagne-dim);
