@@ -49,6 +49,5 @@ Before going live, review these items:
 
 1. **Canonical & Social URLs** — Update the `<link rel="canonical">` and `og:url` values in `index.html` to match your production domain.
 2. **OG/Twitter Image URL** — Update the `og:image` and `twitter:image` meta tags to the full production URL of the portrait.
-3. **Carrier Logo Assets** — Six carriers currently use SVG placeholders (Aetna, Americo, American Amicable, Ethos, Aflac, American General). Replace each `.svg` file in `assets/logos/` with the real carrier logo. The matching TODO comments in `index.html` mark which ones.
-4. **Testimonials** — The three testimonials are placeholders. Replace with verified client testimonials and ensure written consent is on file before launch (insurance compliance requirement).
+3. **Testimonials** — The three testimonials are placeholders. Replace with verified client testimonials and ensure written consent is on file before launch (insurance compliance requirement).
 5. **Calendly Link** — Verify the Calendly embed URL (`manchesteralex633/30min`) is correct and the account is active.
