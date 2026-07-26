@@ -197,10 +197,8 @@ a{color:inherit}
 
 /* ---------- carrier marquee ---------- */
 .carriers{
-  background:rgba(240,244,250,0.95);
-  padding:24px 0 32px;overflow:hidden;
-  border-top:none;
-  border-bottom:none;
+  background:linear-gradient(180deg, #162d5a 0%, #3a6aaf 30%, #8db4e2 50%, #3a6aaf 70%, #162d5a 100%);
+  padding:36px 0 40px;overflow:hidden;
 }
 .carriers-head{
   display:flex;justify-content:space-between;align-items:baseline;gap:20px;
